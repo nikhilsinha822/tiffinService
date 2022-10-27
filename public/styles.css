@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    position: absolute;
+    background-color: #030332;
+    color: white;
+    width: 100%;
+}
+.navlink{
+    float: right;
+    margin: 40px 20px;
+
+}
+.navitem{
+    font-family: 'Titillium Web ', sans-serif;
+    display: inline;
+    
+}
+.navimage{
+    margin-left: 50px;
+    margin-top: 10px;
+    display: inline;
+    width: 150px;
+}
+.Home{
+    background: url("images/Screenshot 2022-10-27 194916.png");
+    /* background-color: aqua; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 200px;
+    padding-top: 250px;
+    text-align: center;
+}
+/* 
+font-family: 'Roboto Slab', serif;
+font-family: 'Titillium Web', sans-serif; */
+.introTxt{
+    color: #030332;
+    font-family: 'Fuzzy Bubbles ', cursive;
+    font-size: 60px;
+    margin: 0 250px;
+    background-color: rgb(128, 128, 128, 0.4);
+}
+.btn{
+    background-color: #FDCE07;
+    color: #030332;
+    border-color: #FDCE07;
+    margin-top: 20px;
+    padding: 20px 35px;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: large;
+}
