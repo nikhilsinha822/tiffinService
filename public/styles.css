@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* navbar */
 .navbar{
     position: absolute;
     background-color: #030332;
@@ -25,6 +26,7 @@
     display: inline;
     width: 150px;
 }
+/* homepage */
 .Home{
     background: url("images/Screenshot 2022-10-27 194916.png");
     /* background-color: aqua; */
@@ -53,4 +55,126 @@ font-family: 'Titillium Web', sans-serif; */
     padding: 20px 35px;
     font-family: 'Hammersmith One', sans-serif;
     font-size: large;
+}
+
+/* menu page */
+.menuHead{
+    color: #030332;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 50px;
+    line-height: 150px;
+    padding-bottom: 50px;
+}
+.menuButton{
+   margin-bottom: 100px;
+   text-align: center;
+   padding: 20px 50px;
+}
+.menuPg{
+    text-align: center;
+}
+.menuImage{
+    width: 180px;
+    float: right;
+}
+.itemName{
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0 30px;
+}
+.itemDetail{
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0 30px;
+}
+@media screen and (min-width: 768px){
+    .childMenu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width:100%;
+        padding-bottom: 120px;
+    }
+    .parentMenu{
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+        max-width:100%;
+    }
+}
+/* pricing page */
+.column{
+    width: 29%;
+    float: left;
+    margin: 25px;
+    background-color: rgb(240, 235, 235);
+    opacity: 0.9;
+}
+.desc{
+    list-style-type: none;
+    border: 1px solid rgb(241, 237, 237);
+    text-align: center;
+    line-height: 80px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.cardHead{
+    background-color: #030332;
+    color: white;
+    font-size: 40px;
+}
+.priceHead{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 50px;
+    line-height: 150px;
+    color: #eee;
+}
+.priceAmt{
+    
+    background-color: #07077f;
+    color: #eee;
+    font-size: 25px;
+}
+.cardBtn{
+    color: #eee;
+    background-color: #07077f;
+    font-size: 30px;
+    padding: 5px 30px;
+    margin-top: 40px;
+    border-radius: 10%;
+}
+.cardBtn:hover{
+    background-color: #030332;
+}
+@media only screen and (max-width: 600px) {
+    .columns {
+      width: 100%;
+    }
+  }
+.pricingPart{
+    background-image: url("/images/eazytrendz_3070_trend20210218124824.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 600px;
+}
+/* contact */
+/* contacts */
+.contHead{
+    font-size: 3vmax;
+    line-height: 4vmax;
+    text-align: center;
+}
+.contact{
+    text-align: center;
+}
+.botxt{
+    color: grey;
+    line-height: 40px;
+}
+.icons{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.icon{
+    font-size: 30px;
+    padding: 20px;
+    color: black;
 }
