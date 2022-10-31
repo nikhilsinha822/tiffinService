@@ -2,7 +2,7 @@ import React from "react";
 
 function contact(){
     return <footer >
-    <div class="contact">
+    <div class="contact" id="Contact">
         <div class="icons">
         <a class="icon" href="https://www.facebook.com/nikhil.sinha.98871"><i class="fa-brands fa-facebook"></i></a>
         <a class="icon" href="https://www.instagram.com/__nikhil___sinha__/"><i class="fa-brands fa-square-instagram"></i></a>
