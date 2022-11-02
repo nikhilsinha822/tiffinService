@@ -86,7 +86,15 @@ font-family: 'Titillium Web', sans-serif; */
     font-family: 'Fuzzy Bubbles ', cursive;
     font-size: 4vw;
     margin: 0 20vw;
-    background-color: rgb(128, 128, 128, 0.4);
+    transition: 1s;
+    transform: translate(-200vh);
+    /* background-color: rgb(128, 128, 128, 0.4); */
+    background-color: hsl(49, 98%, 51%, 0.2);
+    /* border: 10px solid #030332; */
+    /* border-radius: 60%; */
+}
+.resintroTxt{
+    transform: none;
 }
 .btn{
     background-color: #FDCE07;
@@ -115,18 +123,20 @@ font-family: 'Titillium Web', sans-serif; */
     text-align: center;
     font-size: 6vw;
     line-height: 19vw;
-    padding-bottom: 8vw;
 }
 .menuButton{
-   margin-bottom: 100px;
+   margin-bottom: 50px;
    text-align: center;
    padding: 20px 50px;
 }
 .menuPg{
     text-align: center;
+    max-width: 100%;
+    min-width: 100%;
 }
 .menuImage{
-    width: 180px;
+    max-width: 130px;
+    aspect-ratio: 25/20;
 }
 .itemName{
     font-family: 'Titillium Web', sans-serif;
@@ -140,54 +150,121 @@ font-family: 'Titillium Web', sans-serif; */
     .parentMenu{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width:100%;
+        
     }
 }
-@media screen and (min-width: 384px){
     .childMenu{
         display: grid;
-        grid-template-columns: 0.5fr 1fr;
+        grid-template-columns: 1fr 1fr;
         max-width:100%;
         padding-bottom: 120px;
         float: right;
     }
+    .sp{
+        padding-bottom: 0;
+    }
+
+/* menucontainer */
+.MenuContainer{
+    width: auto;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
+.menucar{
+    padding: 20px 10px;
+    font-size: larger;
+    position: absolute;
+    top: 75rem;
+    cursor: pointer;
+}
+.childMenu{
+    min-width: 100%;
+    max-width: 100%;
+}
+.leftbtn{
+  left: 0;
+  top: 65rem;
+  margin: 20px;
+}
+.rightbtn{
+  margin: 20px;
+  right: 0;
+  top: 65rem;
+}
+.menucar{
+    border: none;
+    background-color: hsl(240, 90%, 26%, 0.85);
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
+.menucar:hover{
+    background-color: hsl(240, 90%, 26%);
+}
+.caroselBtn{
+    color: white;
+    font-size: 30px;
+}
+@media screen and (max-width: 907px){
+.childMenuCaroselRes{
+    display: revert;
+}}
+
+    /* .responsiveMenu{
+        display: flex;
+        max-width: 30%;
+        min-width: 22%;
+    }
+    .responsiveMenuBtnl{
+        top: 120vh;
+        margin: 20px;
+      }
+    .responsiveMenuBtnr{
+        margin: 20px;
+        top: 120vh;
+      } */
+
+
+
 /* pricing page */
 .column{
-    margin: 5vw 22vw;
+    margin: 5vw 12vw;
     background-color: rgb(240, 235, 235);
     opacity: 0.9;
-    width: 50%;
+    width: 75%;
+    
 }
 
 .desc{
     list-style-type: none;
     border: 1px solid rgb(241, 237, 237);
     text-align: center;
-    line-height: 80px;
+    line-height: 5rem;
+    font-size: 1rem;
     font-family: 'Titillium Web', sans-serif;
 }
 .cardHead{
     background-color: #030332;
     color: white;
-    font-size: 3vw;
+    font-size: 2rem;
 }
 .priceHead{
     font-family: 'Roboto Slab', serif;
     text-align: center;
-    font-size: 4vw;
-    line-height: 15vw;
+    font-size: 4rem;
+    line-height: 10rem;
     color: #eee;
 }
 .priceAmt{
     background-color: #07077f;
     color: #eee;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 .cardBtn{
     color: #eee;
     background-color: #07077f;
-    font-size: 2vw;
+    font-size: 1.7rem;
     padding: 5px 30px;
     margin-top: 40px;
     border-radius: 10%;
@@ -201,26 +278,24 @@ font-family: 'Titillium Web', sans-serif; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    min-width: fit-content;
+    min-height: fit-content;
     padding-bottom: 2vw;
+    
 }
-@media screen and (max-width: 1154px) and (min-width: 768px){
-    .columns {
-        width: 0;
-    }
-}
-@media screen and (min-width: 768px){
+
+@media screen and (min-width: 1209px){
     .column{
         width: 29%;
         float: left;
         margin: 25px;
+        
     }
-    .pricingPart{padding-bottom: 600px;
-    }}
-/* @media only screen and (max-width: 600px) {
-    .columns {
-      width: 50%;
-    }
-} */
+    .pricingPart{
+        padding-bottom: 600px;
+    }   
+}
+
 
 /* contact */
 /* contacts */
