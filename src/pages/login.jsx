@@ -2,15 +2,12 @@ import React, { useState } from "react";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [allEntry, setallEntry] = useState([]);
   function Email(event) {
     return setEmail(event.target.value);
-  }
-  function Password(event) {
-    return setPassword(event.target.value);
   }
   function Name(event) {
     return setName(event.target.value);
@@ -18,9 +15,12 @@ function LoginForm() {
   function Address(event) {
     return setAddress(event.target.value);
   }
+  function PhoneNumber(event){
+    return setPhoneNumber(event.target.value);
+  }
   function submitForm(event) {
     event.preventDefault();
-    const newEntry = { email: email, password: password };
+    const newEntry = { name: name, email: email, phoneNumber: phoneNumber,address: address};
 
     setallEntry([...allEntry, newEntry]);
     console.log(allEntry);
@@ -40,17 +40,6 @@ function LoginForm() {
           />
         </div>
         <div>
-          <label className="loginText" htmlFor="Address">Address</label>
-          <input className="loginInput"
-            type="text"
-            name="Address"
-            id="Address"
-            autoComplete="off"
-            value={address}
-            onChange={Address}
-          />
-        </div>
-        <div>
           <label className="loginText" htmlFor="email">Email</label>
           <input className="loginInput"
             type="email"
@@ -62,14 +51,25 @@ function LoginForm() {
           />
         </div>
         <div>
-          <label className="loginText" htmlFor="password">Password</label>
+          <label className="loginText" htmlFor="phoneNumber">Mobile Number</label>
           <input className="loginInput"
-            type="password"
-            name="password"
-            id="password"
+            type="number"
+            name="phoneNumber"
+            id="phoneNumber"
             autoComplete="off"
-            value={password}
-            onChange={Password}
+            value={phoneNumber}
+            onChange={PhoneNumber}
+          />
+        </div>
+        <div>
+          <label className="loginText" htmlFor="Address">Address</label>
+          <input className="loginInput"
+            type="text"
+            name="Address"
+            id="Address"
+            autoComplete="off"
+            value={address}
+            onChange={Address}
           />
         </div>
         <button className="cardBtn" type="submit">Login</button>

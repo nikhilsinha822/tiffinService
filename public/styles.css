@@ -137,7 +137,12 @@ font-family: 'Titillium Web', sans-serif; */
 .menuImage{
     max-width: 130px;
     aspect-ratio: 25/20;
+    border-radius: 10%;
 }
+/* .menuImage:hover{
+    max-width: 160px;
+    
+}   */
 .itemName{
     font-family: 'Titillium Web', sans-serif;
     padding: 0 3vh;
@@ -337,3 +342,7 @@ font-family: 'Titillium Web', sans-serif; */
     display: block;
     border: 1px solid black;
 }
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
