@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -25,9 +26,37 @@ function LoginForm() {
     setallEntry([...allEntry, newEntry]);
     console.log(allEntry);
   }
+
+  const PostData = async (e)=>{
+    e.preventDefault();
+    const navigate = useNavigate();
+    const { name, email, phoneNumber,address} = user;
+    const res = await fetch("/register",{
+      method: "POST",
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body:JSON.stringify({
+        name, email, phoneNumber,address
+      })
+    });
+
+    const data = await res.json();
+    if(data.status === 422 || !data){
+      window.alert("Registration failed");
+      console.log("Registration failed")
+    }
+    else{
+      window.alert("Registration Success");
+      console.log("Registration Success")
+
+      navigate("/")
+    }
+    
+  }
   return (
     <div className="loginForm">
-      <form action="" onSubmit={submitForm}>
+      <form action="" method="POST" onSubmit={submitForm}>
         <div>
           <label className="loginText" htmlFor="Name">Name</label>
           <input className="loginInput"
@@ -72,7 +101,7 @@ function LoginForm() {
             onChange={Address}
           />
         </div>
-        <button className="cardBtn" type="submit">Login</button>
+        <button className="cardBtn" type="submit" onClick={PostData}>Login</button>
       </form>
     </div>
   );
